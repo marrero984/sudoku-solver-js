@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.sudoku-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.row:first-child   { border-top: 3px solid #222; }
+.row:nth-child(3n) { border-bottom: 3px solid #222; }
+.row:last-child    { border-bottom: 4px solid #222; }
+
+.cell {
+  display: flex;
+  width: 11.1111%;
+  border-left: 1px solid #222;
+  border-top: 1px solid #222;
+}
+
+.cell:first-child { border-left: 4px solid #222; }
+.cell:nth-child(3n)  { border-right: 3px solid #222; }
+.cell:last-child  { border-right: 4px solid #222; }
+
+input {
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.error {
+  background: #F44336;
+  color: #fff;
+}
+
+.prefilled {
+  background: #ECEFF1;
+  font-weight: 500;
+}
